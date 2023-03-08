@@ -26,3 +26,5 @@ APP_PORT = int(os.environ.get('APP_PORT',8080))
 enable_response_models = True
 openapi_url = '/api'
 docs_url = '/docs'
+dap_url = ''
+posix_download_url = ''
