@@ -102,7 +102,7 @@ git clone https://github.com/IS-ENES-Data/stac-generator-example.git
 
 git checkout dkrz
 
-## nore intake at dkrz
+## more intake at dkrz
 
 https://gitlab.dkrz.de/data-infrastructure-services/intake-esm/-/raw/master/esm-collections/cloud-access/dkrz_cmip5_archive.json
 https://gitlab.dkrz.de/data-infrastructure-services/intake-esm/-/raw/master/esm-collections/cloud-access/dkrz_cmip5_disk.json
@@ -116,3 +116,24 @@ https://gitlab.dkrz.de/data-infrastructure-services/intake-esm/-/raw/master/esm-
 https://gitlab.dkrz.de/data-infrastructure-services/intake-esm/-/raw/master/esm-collections/cloud-access/dkrz_nextgems_disk.json
 https://gitlab.dkrz.de/data-infrastructure-services/intake-esm/-/raw/master/esm-collections/cloud-access/dkrz_palmod2_disk.json
 
+
+configure intake catalog in stac-generator-example
+
+https://github.com/IS-ENES-Data/stac-generator-example
+
+```bash
+git checkout dkrz
+
+vim conf/asset-generator.yaml
+
+- name: intake_esm_cmip6_disk
+    uri: https://gitlab.dkrz.de/data-infrastructure-services/intake-esm/-/raw/master/esm-collections/cloud-access/dkrz_cmip6_disk.json
+    object_path_attr: uri
+    search_kwargs:
+```    
+
+
+https://swift.dkrz.de/v1/dkrz_a44962e3ba914c309a7421573a6949a6/intake-esm/dkrz_mpige_disk\/(?P<project>\w+)\.(?P<product>\w+)\.(?P<institute>\w+(?:-\w+)*)\.(?P<model>\w+(?:-\w+)+)\.(?P<experiment>\w+)\.(?P<time_frequency>\w+)\.(?P<realm>\w+)\.(?P<variable>\w+)\.(?P<ensemble>\w+)\.(?P<version>\w+)
+
+
+/work/mh1007/CMOR/MPI-GE/output1/MPI-M/MPI-ESM/piControl/mon/atmos/prsn/r001i1850p3/v20190123/prsn_Amon_MPI-ESM_piControl_r001i1850p3_310001-319912.nc
