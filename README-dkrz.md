@@ -137,3 +137,7 @@ https://swift.dkrz.de/v1/dkrz_a44962e3ba914c309a7421573a6949a6/intake-esm/dkrz_m
 
 
 /work/mh1007/CMOR/MPI-GE/output1/MPI-M/MPI-ESM/piControl/mon/atmos/prsn/r001i1850p3/v20190123/prsn_Amon_MPI-ESM_piControl_r001i1850p3_310001-319912.nc
+
+## testing
+
+http://stac-test1.cloud.dkrz.de:9200/stac-assets/_search?pretty
